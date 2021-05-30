@@ -1,0 +1,13 @@
+$theme-colors: (
+        "primary": #6C7DFF,
+        "danger": #FF63A5,
+        "success": #1EE0AC,
+        "dark": #364A63,
+        "warning": #EFC75E
+);
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
+@import "@webpixels/css";
+
+@import './custom';
