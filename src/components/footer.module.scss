@@ -1,0 +1,29 @@
+.footer{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    padding-left: 100px;
+}
+
+.footer_top{
+    padding: 123px 0 0;
+    background-color: #1e1f52;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 0 solid rgba(139,131,149,.4);
+}
+
+.footer_bottom{
+    padding: 0 0 110px;
+    background-color: #1e1f52;
+    border-top: 0 solid rgba(139,131,149,.4);
+}
+
+.footer_logo{
+    margin: 0 0 35px;
+    color: #8b8395;
+    display: inline-block;
+    margin-bottom: 0;   
+}
