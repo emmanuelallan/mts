@@ -8,7 +8,6 @@ export default function Layout() {
         <title>Max The Stranger - Software Developer | Music Producer</title>
         <meta name="description" content="Software Engineer | Music Producer" />
         <link rel="icon" href="/favicon.ico" />
-        <script src="/js/main.js" defer />
       </Head>
       <main className="main">
         <div className="primary">
