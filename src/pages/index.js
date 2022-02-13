@@ -1,45 +1,82 @@
-import Image from "next/image";
-import Layout from "./layout";
-import styles from "../assets/css/home.module.scss";
+import Head from 'next/head';
+import Image from 'next/image';
 
-export default function Home() {
+export default function Layout() {
   return (
-    <Layout>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className={styles.video}>
-              <div className="position-relative">
-                <img
-                  width="1195"
-                  height="675"
-                  src="https://neobeat.qodeinteractive.com/wp-content/uploads/2020/03/home-9-video-img-1.jpg"
-                  className={`w-100 ${styles.br}`}
-                  alt="c"
-                  srcSet="https://neobeat.qodeinteractive.com/wp-content/uploads/2020/03/home-9-video-img-1.jpg 1195w, https://neobeat.qodeinteractive.com/wp-content/uploads/2020/03/home-9-video-img-1-600x339.jpg 600w, https://neobeat.qodeinteractive.com/wp-content/uploads/2020/03/home-9-video-img-1-800x452.jpg 800w, https://neobeat.qodeinteractive.com/wp-content/uploads/2020/03/home-9-video-img-1-300x169.jpg 300w, https://neobeat.qodeinteractive.com/wp-content/uploads/2020/03/home-9-video-img-1-1024x578.jpg 1024w, https://neobeat.qodeinteractive.com/wp-content/uploads/2020/03/home-9-video-img-1-768x434.jpg 768w"
-                  sizes="(max-width: 1195px) 100vw, 1195px"
-                />
-                <a href="#" className={styles.player_icon}>
-                  <i className="bi bi-play" />
-                </a>
-              </div>
-            </div>
+    <>
+      <Head>
+        <title>Max The Stranger - Software Developer | Music Producer</title>
+        <meta name="description" content="Software Engineer | Music Producer" />
+        <link rel="icon" href="/favicon.ico" />
+        <script src="/js/main.js" defer />
+      </Head>
+      <main className="main">
+        <div className="primary">
+          <div className="software">
+            <h1 className="text-heading">Max makes Software</h1>
+            <p className="mb-24">
+              I'm a software engineer in Nairobi. I love building open-source
+              projects and writing about what I learn. This website is my
+              digital garden—a compendium of the things I've learned and
+              created.
+            </p>
+            <a
+              href="https://code.maxthestranger.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="linkto"
+            >
+              Check out Max the Software
+            </a>
           </div>
-        </div>
-      </div>
 
-      <section className={styles.about}>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12 text-center">
-              <h2 className={`h2 text-white ${styles.title}`}>About Me</h2>
-              <p className={`mt-3 ${styles.info}`}>
-                This site is still under development
-              </p>
-            </div>
+          <div className="music">
+            <h2 className="text-heading">Max makes Music</h2>
+            <p className="mb-24">
+              I'm a Music producer based in Nairobi. I love writing music and
+              singing about what I feel. This website is my digital garden—a
+              compendium of the things I've written and created.
+            </p>
+            <a
+              href="https://music.maxthestranger.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="linkto"
+            >
+              Check out Max the Music
+            </a>
+          </div>
+
+          <div className="footer">
+            <p>&copy; {new Date().getFullYear()}. All Rights Reserved</p>
           </div>
         </div>
-      </section>
-    </Layout>
+        <div className="secondary">
+          <div className="info">
+            <div className="info-body">
+              {/* <Image
+                className="logo"
+                src="/img/logo.svg"
+                alt="logo"
+                width={100}
+                height={100}
+              /> */}
+              <h1 class="title">Max The Stranger</h1>
+              {/* <p class="info-p">
+                Proven to increase customer spending by up to 39%, egPay is the
+                most complete cashless and contactless POS solution for events
+                on the market, from tickets to tills and beyond.
+              </p> */}
+
+              <a href="mailto:thestrangermax@gmail.com" className="contact">
+                <button type="button">Contact Me</button>
+              </a>
+            </div>
+
+            <img src="/img/bg.jpg" className="image-bg" alt="bg" />
+          </div>
+        </div>
+      </main>
+    </>
   );
 }

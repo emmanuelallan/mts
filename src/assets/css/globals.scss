@@ -1,13 +1,249 @@
-$theme-colors: (
-        "primary": #6C7DFF,
-        "danger": #FF63A5,
-        "success": #1EE0AC,
-        "dark": #364A63,
-        "warning": #EFC75E
-);
+@font-face {
+  font-family: 'bolton';
+  src: url('/font/bolton-regular.woff2');
+  font-weight: normal;
+}
 
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@font-face {
+  font-family: 'bolton';
+  src: url('/font/bolton-bold.woff2');
+  font-weight: bold;
+}
 
-@import "@webpixels/css";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-@import './custom';
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  color: #101623;
+  background: #f9f9fb;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'bolton', sans-serif;
+  min-height: 100%;
+  font-weight: 500;
+}
+
+img {
+  border-style: none;
+}
+
+.main {
+  @media (min-width: 1440px) {
+    grid-template-columns: 600px 1fr;
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 480px 1fr;
+  }
+}
+
+.primary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 70vh;
+  background: #fff;
+  overflow-y: auto;
+  padding: 24px;
+
+  @media (min-width: 1440px) {
+    padding: 48px 96px;
+  }
+
+  @media (min-width: 768px) {
+    height: 100vh;
+    padding: 48px;
+  }
+}
+
+.logo {
+  display: block;
+  margin-bottom: 72px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+  @media (min-width: 768px) {
+    margin-bottom: 96px;
+  }
+}
+
+.text-heading {
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.linkto {
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+  color: #101623;
+  line-height: 40px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// .music {
+//   padding: 24px;
+//   background-color: #f8f8f8;
+//   border-radius: 6px;
+// }
+
+.footer {
+  margin-top: 24px;
+  padding: 24px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(59, 69, 89, 0.15);
+}
+
+.info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 70vh;
+  min-height: 32rem;
+
+  @media (min-width: 768px) {
+    height: auto;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: '';
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.5) 0,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+    @media (min-width: 768px) {
+      background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.8) 0,
+        rgba(0, 0, 0, 0.5) 35%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+  }
+}
+
+.info-body {
+  z-index: 100;
+  color: #fff;
+  padding: 48px 24px;
+  text-shadow: 0 0 4px rgb(0 0 0 / 50%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    padding: 72px;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+
+.title {
+  font-size: 2.625rem;
+  line-height: 1.3;
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.info-p {
+  margin: 0 0 24px;
+  max-width: 42.5rem;
+
+  @media (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+}
+
+.contact {
+  text-decoration: none;
+  background: transparent;
+  display: block;
+  transition: all 0.2s ease-in;
+
+  button {
+    color: #fff;
+    padding: 12px 24px;
+    font-weight: 600;
+    background: 0 0;
+    display: inline-block;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-appearance: none;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.image-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  object-position: 50% 0;
+
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
+}
