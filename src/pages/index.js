@@ -11,30 +11,65 @@ export default function Layout() {
       </Head>
       <main className="main">
         <div className="primary">
-          <div className="software">
-            <h1 className="text-heading">Max makes Software</h1>
-            <p className="mb-24">
-              I'm a software engineer in Nairobi. I love building open-source
-              projects and writing about what I learn. This website is my
-              digital garden—a compendium of the things I've learned and
-              created.
-            </p>
+          <div className="software mx">
+            <h1 className="text-heading gg"># Software Engineer</h1>
+            <div className="mb-24">
+              <pre>
+                <span className="pp">class</span>{' '}
+                <span className="ww">Node</span>
+                <br />
+                &emsp; &emsp;<span className="ww">attr_accessor</span>{' '}
+                <span className="pp">:next_node</span>
+                <br />
+                &emsp; &emsp;
+                <span className="ww">attr_accessor</span>{' '}
+                <span className="pp">:value</span>
+                <br />
+                <br />
+                &emsp; &emsp;
+                <span className="pp">def</span>{' '}
+                <span className="bb">initialize</span>
+                <span className="ww">(value)</span>
+                <br />
+                &emsp; &emsp;&emsp; &emsp;
+                <span className="pp">@value</span> <span className="ww">=</span>{' '}
+                <span className="ww">value</span>
+                <br />
+                &emsp; &emsp;&emsp; &emsp;
+                <span className="pp">@next_node</span>{' '}
+                <span className="ww">=</span> <span className="ww">nil</span>
+                <br />
+                &emsp; &emsp;
+                <span className="pp">end</span>
+                <br />
+                <span className="pp">end</span>
+              </pre>
+              <p className="mt-2 mm">
+                <span className="ww">=begin</span>
+                <br />
+                I love building projects and writing about what I learn. This
+                website is my digital garden—a compendium of the things I've
+                learned and created.
+                <br />
+                <span className="ww">=end</span>
+              </p>
+            </div>
             <a
               href="https://code.maxthestranger.com/"
               rel="noopener noreferrer"
               target="_blank"
               className="linkto"
             >
-              Check out Max the Software
+              Check out --&gt; Coding Max
             </a>
           </div>
 
-          <div className="music">
-            <h2 className="text-heading">Max makes Music</h2>
+          <div className="music mx">
+            <h2 className="text-heading">🎵 Music Producer</h2>
             <p className="mb-24">
-              I'm a Music producer based in Nairobi. I love writing music and
-              singing about what I feel. This website is my digital garden—a
-              compendium of the things I've written and created.
+              I'm a Music producer based in Nairobi. I love the science of
+              digital music production from synthesis to manipulating virtual
+              studio technology (VSTs).
             </p>
             <a
               href="https://music.maxthestranger.com/"
@@ -42,11 +77,11 @@ export default function Layout() {
               target="_blank"
               className="linkto"
             >
-              Check out Max the Music
+              Check out Max is to Music
             </a>
           </div>
 
-          <div className="footer">
+          <div className="footer mx">
             <p>&copy; {new Date().getFullYear()}. All Rights Reserved</p>
           </div>
         </div>
@@ -60,7 +95,7 @@ export default function Layout() {
                 width={100}
                 height={100}
               /> */}
-              <h1 class="title">Max The Stranger</h1>
+              <h1 className="title">Max The Stranger</h1>
               {/* <p class="info-p">
                 Proven to increase customer spending by up to 39%, egPay is the
                 most complete cashless and contactless POS solution for events
