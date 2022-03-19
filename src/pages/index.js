@@ -6,7 +6,10 @@ export default function Layout() {
     <>
       <Head>
         <title>Max The Stranger - Software Developer | Music Producer</title>
-        <meta name="description" content="Software Engineer | Music Producer" />
+        <meta
+          name="description"
+          content="Max The Stranger is a software developer and a music producer based in nairobi"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="main">
